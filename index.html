@@ -5,43 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>For Nana 🤍</title>
 
-    <style>
-        body{
-            margin:0;
-            background:#0f0f0f;
-            color:white;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            height:100vh;
-            font-family:Arial, sans-serif;
-            text-align:center;
-        }
+<style>
 
-        h1{
-            font-size:40px;
-        }
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
-        p{
-            font-size:20px;
-            opacity:.8;
-        }
+    background:linear-gradient(to bottom,#090b18,#12172f,#1d2345);
 
-        button{
-            margin-top:30px;
-            padding:15px 30px;
-            border:none;
-            border-radius:30px;
-            font-size:18px;
-            cursor:pointer;
-        }
-    </style>
+    color:white;
+    font-family:Georgia, serif;
+    text-align:center;
 
+    overflow:hidden;
+}
+
+.container{
+    animation:fade 2s;
+    max-width:700px;
+    padding:30px;
+}
+
+h1{
+    font-size:45px;
+    font-weight:400;
+    margin-bottom:25px;
+}
+
+p{
+    line-height:1.8;
+    font-size:20px;
+    opacity:.85;
+}
+
+button{
+
+    margin-top:40px;
+
+    padding:14px 38px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:rgba(255,255,255,.15);
+
+    color:white;
+
+    backdrop-filter:blur(10px);
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    transform:scale(1.05);
+
+    background:rgba(255,255,255,.25);
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
-<div>
+<div class="container">
 
 <h1>dear, nana 🤍</h1>
 
