@@ -1,247 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>for nana ♡</title>
+<title>for my sweetest, aruna lorelei.</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-
-height:100vh;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-overflow:hidden;
-
-background:
-radial-gradient(circle at top,#2b3563 0%,#161b34 45%,#090b18 100%);
-
-font-family:'Inter',sans-serif;
-
-color:white;
-
-}
-
-/* stars */
-
-.stars{
-
-position:absolute;
-
-width:100%;
-
-height:100%;
-
-background-image:
-
-radial-gradient(white 1px,transparent 1px);
-
-background-size:55px 55px;
-
-opacity:.18;
-
-animation:twinkle 5s ease-in-out infinite alternate;
-
-}
-
-@keyframes twinkle{
-
-from{
-
-opacity:.10;
-
-}
-
-to{
-
-opacity:.28;
-
-}
-
-}
-
-.card{
-
-position:relative;
-
-z-index:2;
-
-width:90%;
-
-max-width:650px;
-
-padding:45px;
-
-border-radius:30px;
-
-background:rgba(255,255,255,.05);
-
-backdrop-filter:blur(14px);
-
-border:1px solid rgba(255,255,255,.08);
-
-text-align:center;
-
-animation:fade 1.8s;
-
-}
-
-@keyframes fade{
-
-from{
-
-opacity:0;
-
-transform:translateY(20px);
-
-}
-
-to{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
-
-}
-
-h1{
-
-font-family:'Cormorant Garamond',serif;
-
-font-size:58px;
-
-font-weight:500;
-
-margin-bottom:25px;
-
-}
-
-p{
-
-font-size:17px;
-
-line-height:2;
-
-opacity:.82;
-
-}
-
-button{
-
-margin-top:38px;
-
-padding:15px 40px;
-
-border-radius:999px;
-
-border:none;
-
-background:rgba(255,255,255,.12);
-
-color:white;
-
-font-size:16px;
-
-letter-spacing:1px;
-
-cursor:pointer;
-
-transition:.35s;
-
-}
-
-button:hover{
-
-transform:translateY(-4px);
-
-background:rgba(255,255,255,.2);
-
-box-shadow:0 0 30px rgba(255,255,255,.12);
-
-}
-
-small{
-
-display:block;
-
-margin-top:45px;
-
-font-size:12px;
-
-letter-spacing:1px;
-
-opacity:.4;
-
-}
-
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<div class="stars"></div>
+<div id="stars"></div>
 
-<div class="card">
+<main>
 
-<h1>dear, nana.</h1>
+<section class="page active">
+
+<div class="chapter">
+chapter i
+</div>
+
+<h1 id="title"></h1>
+
+<p id="subtitle"></p>
+
+<div class="hint">
+tap anywhere to begin
+</div>
+
+</section>
+
+<section class="page">
+
+<div class="chapter">
+chapter ii
+</div>
+
+<h2>before we begin...</h2>
+
+<p>
+please wear your earphones.
+<br><br>
+this little website was made with love,
+especially for you.
+🤍
+</p>
+
+</section>
+
+<section class="page">
+
+<div class="chapter">
+chapter iii
+</div>
+
+<h2>our story.</h2>
 
 <p>
 
-before you continue,
+every conversation.
 
-there's one small favor i'd like to ask.
+every song.
 
-<br><br>
+every random message.
 
-please put on your earphones,
+every "take care."
 
-take your time,
-
-and don't rush through any page.
-
-<br><br>
-
-this little place
-
-was made only for you.
+slowly became
+one of my favorite parts
+of every single day.
 
 </p>
 
-<button onclick="location.href='page2.html'">
+</section>
 
-i'm ready.
+<section class="page">
 
-</button>
-
-<small>
-
-made with every song
-
-i couldn't explain.
-
-</small>
-
+<div class="chapter">
+chapter iv
 </div>
+
+<h2>to be continued...</h2>
+
+<p>
+
+our memories.
+
+our songs.
+
+our little moments.
+
+and...
+
+a letter i've been wanting
+to give you.
+
+🤍
+
+</p>
+
+</section>
+
+</main>
+
+<script src="script.js"></script>
 
 </body>
 
