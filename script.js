@@ -1,81 +1,136 @@
-const pages = document.querySelectorAll(".page");
-const title = document.getElementById("title");
-const subtitle = document.getElementById("subtitle");
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-const titleText = "for my sweetest,\aruna lorelei.";
-const subText = "every story has a beginning.";
+body{
+    background:#090b16;
+    color:#ffffff;
+    font-family:'Inter',sans-serif;
+    overflow:hidden;
+}
 
-let i = 0;
-let j = 0;
+main{
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    padding:30px;
+}
 
-// typewriter title
-function typeTitle() {
-    if (i < titleText.length) {
-        if (titleText.charAt(i) === "\n") {
-            title.innerHTML += "<br>";
-        } else {
-            title.innerHTML += titleText.charAt(i);
-        }
+.page{
+    width:100%;
+    max-width:700px;
+    text-align:center;
+    display:none;
+    animation:fade .8s ease;
+}
 
-        i++;
-        setTimeout(typeTitle, 70);
+.page.active{
+    display:block;
+}
 
-    } else {
-        setTimeout(typeSubtitle, 400);
+.chapter{
+    font-size:12px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    color:#9fb4ff;
+    margin-bottom:25px;
+}
+
+h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:50px;
+    line-height:1.2;
+    margin-bottom:20px;
+    white-space:pre-line;
+}
+
+h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+p{
+    font-size:18px;
+    line-height:1.9;
+    color:#d9d9d9;
+}
+
+.hint{
+    margin-top:60px;
+    opacity:.5;
+    font-size:14px;
+    letter-spacing:1px;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
     }
 }
 
-// typewriter subtitle
-function typeSubtitle() {
+#stars{
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    overflow:hidden;
+}
 
-    if (j < subText.length) {
+.star{
+    position:absolute;
+    width:2px;
+    height:2px;
+    background:white;
+    border-radius:50%;
+    animation:twinkle 3s infinite ease-in-out;
+}
 
-        subtitle.innerHTML += subText.charAt(j);
+@keyframes twinkle{
 
-        j++;
+    0%,100%{
+        opacity:.2;
+        transform:scale(1);
+    }
 
-        setTimeout(typeSubtitle, 35);
-
+    50%{
+        opacity:1;
+        transform:scale(2);
     }
 
 }
 
-typeTitle();
+@media(max-width:600px){
 
+    h1{
+        font-size:38px;
+    }
 
-// page navigation
+    h2{
+        font-size:30px;
+    }
 
-let current = 0;
+    p{
+        font-size:16px;
+        line-height:1.8;
+    }
 
-document.addEventListener("click", () => {
+    .chapter{
+        font-size:11px;
+    }
 
-    if (current >= pages.length - 1) return;
-
-    pages[current].classList.remove("active");
-
-    current++;
-
-    pages[current].classList.add("active");
-
-});
-
-
-// stars
-
-const stars = document.getElementById("stars");
-
-for(let s=0;s<120;s++){
-
-    const star=document.createElement("div");
-
-    star.className="star";
-
-    star.style.left=Math.random()*100+"vw";
-
-    star.style.top=Math.random()*100+"vh";
-
-    star.style.animationDelay=Math.random()*3+"s";
-
-    stars.appendChild(star);
+    .hint{
+        font-size:13px;
+    }
 
 }
